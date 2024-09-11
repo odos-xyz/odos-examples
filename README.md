@@ -1,2 +1,3 @@
-# odos-examples
-Example for integrating the Odos platform
+# Odos Examples
+
+Examples for integrating the Odos platform.
