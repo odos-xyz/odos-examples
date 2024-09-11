@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [`create-react-app`](https://github.com/facebook/create-react-app).
 
 ## Getting Started
 
@@ -14,4 +14,4 @@ Run the development server:
 npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.

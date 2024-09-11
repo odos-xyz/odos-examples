@@ -1,8 +1,21 @@
 import React from "react";
 import { OdosSwapWidget } from "odos-widgets";
-import { getRpcUrlMap, exampleLightTheme } from "./utils";
+import { getRpcUrlMap, exampleLightTheme, chainIds } from "./utils";
 
 function App() {
+  /*
+  NOTE:
+  - All OdosSwapWidget props are optional.
+  - The chainIds prop tells the widget which chains to render.
+  - If rpcUrlMap is omitted, public RPC URLs will be used for all chains in chainIds.
+  - If you provide an rpcUrlMap that includes only some chains in chainIds, public RPC
+    URLs will be used for the rest.
+  - If theme is omitted, the default Odos theme will be applied.
+  - If you specify only a subset of the available theme properties, default values
+    will be used for the unspecified properties.
+  - More details can be found here: https://www.npmjs.com/package/odos-widgets
+  */
+
   const rpcUrlMap = getRpcUrlMap();
 
   return (
@@ -19,15 +32,7 @@ function App() {
       }}
     >
       <h1 style={{ fontSize: "1.5rem", fontWeight: 500 }}>CRA Example</h1>
-      {/* NOTE: rpcUrlMap and theme props are both optional, but it is highly recommended
-				you provide them.
-				
-				If rpcUrlMap is not provided, the widget will use public RPC URLs and render all
-				Odos-supported networks.
-
-				If theme is not provided, the widget will use the default Odos theme.
-			*/}
-      <OdosSwapWidget rpcUrlMap={rpcUrlMap} theme={exampleLightTheme} />
+      <OdosSwapWidget chainIds={chainIds} rpcUrlMap={rpcUrlMap} theme={exampleLightTheme} />
     </div>
   );
 }

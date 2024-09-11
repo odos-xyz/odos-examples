@@ -1,21 +1,34 @@
-// List of supported networks:
-// https://docs.odos.xyz/product/sor/v2/#mainnets
-export const getRpcUrlMap = (): Record<number, string> => {
+export const chainIds = [1, 10, 56, 137, 250, 324, 5000, 8453, 34443, 42161, 43114, 59144, 534352];
+
+// Returns an rpcUrlMap with custom RPC URLs from environment variables, or undefined if none are found.
+export const getRpcUrlMap = (): Record<number, string> | undefined => {
   const envVars = {
     1: process.env.REACT_APP_ETHEREUM_RPC,
     10: process.env.REACT_APP_OPTIMISM_RPC,
+    56: process.env.REACT_APP_BSC_RPC,
     137: process.env.REACT_APP_POLYGON_RPC,
+    250: process.env.REACT_APP_FANTOM_RPC,
+    324: process.env.REACT_APP_ZKSYNC_ERA_RPC,
+    5000: process.env.REACT_APP_MANTLE_RPC,
     8453: process.env.REACT_APP_BASE_RPC,
+    34443: process.env.REACT_APP_MODE_RPC,
     42161: process.env.REACT_APP_ARBITRUM_RPC,
+    43114: process.env.REACT_APP_AVALANCHE_RPC,
+    59144: process.env.REACT_APP_LINEA_RPC,
+    534352: process.env.REACT_APP_SCROLL_RPC,
   };
 
-  Object.entries(envVars).forEach(([chainId, rpcUrl]) => {
-    if (!rpcUrl) {
-      throw new Error(`RPC URL not provided for chainId: ${chainId}`);
-    }
-  });
+  const filteredEnvVars = Object.entries(envVars).reduce(
+    (acc, [chainId, rpcUrl]) => {
+      if (rpcUrl) {
+        acc[Number(chainId)] = rpcUrl;
+      }
+      return acc;
+    },
+    {} as Record<number, string>,
+  );
 
-  return envVars as Record<number, string>;
+  return Object.keys(filteredEnvVars).length > 0 ? filteredEnvVars : undefined;
 };
 
 export const exampleLightTheme = {
