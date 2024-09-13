@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "next": "14.2.8",
-    "odos-widgets": "^1.1.7",
+    "odos-widgets": "^1.1.8",
     "react": "^18",
     "react-dom": "^18"
   },
