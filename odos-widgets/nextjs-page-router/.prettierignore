@@ -1,0 +1,9 @@
+/out/
+/build
+/.swc/
+/node_modules
+.DS_Store
+.contentlayer
+.vercel
+.env
+.env.example
