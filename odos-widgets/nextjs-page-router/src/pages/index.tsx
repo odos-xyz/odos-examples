@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
   NOTE:
   - Dynamically importing the widget is a workaround for OdosSwapWidget to 
     work with Next.js Page Router.
-  - OdosSwpaWidget is imported and configured in src/components/SwapWidget.tsx.
+  - OdosSwapWidget is imported and configured in src/components/SwapWidget.tsx.
 */
 const SwapWidget = dynamic(() => import("@/components/SwapWidget"), {
   loading: () => <p>Loading...</p>,
