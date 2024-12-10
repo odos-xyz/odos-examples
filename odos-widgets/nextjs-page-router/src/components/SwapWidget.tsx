@@ -1,5 +1,12 @@
 import { OdosSwapWidget } from "odos-widgets";
-import { getRpcUrlMap, exampleLightTheme, chainIds } from "@/utils";
+import {
+  getRpcUrlMap,
+  exampleLightTheme,
+  chainIds,
+  tokenWhitelistMap,
+  defaultInputTokenMap,
+  defaultOutputTokenMap,
+} from "@/utils";
 
 /*
   NOTE:
@@ -24,5 +31,14 @@ export default function SwapWidget() {
 
   const rpcUrlMap = getRpcUrlMap();
 
-  return <OdosSwapWidget chainIds={chainIds} rpcUrlMap={rpcUrlMap} theme={exampleLightTheme} />;
+  return (
+    <OdosSwapWidget
+      chainIds={chainIds}
+      rpcUrlMap={rpcUrlMap}
+      theme={exampleLightTheme}
+      tokenWhitelistMap={tokenWhitelistMap}
+      defaultInputTokenMap={defaultInputTokenMap}
+      defaultOutputTokenMap={defaultOutputTokenMap}
+    />
+  );
 }

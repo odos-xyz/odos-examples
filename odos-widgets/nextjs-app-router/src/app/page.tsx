@@ -1,6 +1,13 @@
 "use client";
 import { OdosSwapWidget } from "odos-widgets";
-import { getRpcUrlMap, exampleLightTheme, chainIds } from "@/utils";
+import {
+  getRpcUrlMap,
+  exampleLightTheme,
+  chainIds,
+  tokenWhitelistMap,
+  defaultInputTokenMap,
+  defaultOutputTokenMap,
+} from "@/utils";
 
 export default function Home() {
   /*
@@ -21,7 +28,14 @@ export default function Home() {
   return (
     <div className="flex w-full flex-1 flex-col items-center justify-center space-y-6 p-2">
       <h1 className="text-2xl">Next.js Example</h1>
-      <OdosSwapWidget chainIds={chainIds} rpcUrlMap={rpcUrlMap} theme={exampleLightTheme} />
+      <OdosSwapWidget
+        chainIds={chainIds}
+        rpcUrlMap={rpcUrlMap}
+        theme={exampleLightTheme}
+        tokenWhitelistMap={tokenWhitelistMap}
+        defaultInputTokenMap={defaultInputTokenMap}
+        defaultOutputTokenMap={defaultOutputTokenMap}
+      />
     </div>
   );
 }
