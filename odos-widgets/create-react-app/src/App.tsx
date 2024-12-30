@@ -1,6 +1,13 @@
 import React from "react";
 import { OdosSwapWidget } from "odos-widgets";
-import { getRpcUrlMap, exampleLightTheme, chainIds } from "./utils";
+import {
+  getRpcUrlMap,
+  exampleLightTheme,
+  chainIds,
+  tokenWhitelistMap,
+  defaultInputTokenMap,
+  defaultOutputTokenMap,
+} from "./utils";
 
 function App() {
   /*
@@ -32,7 +39,14 @@ function App() {
       }}
     >
       <h1 style={{ fontSize: "1.5rem", fontWeight: 500 }}>CRA Example</h1>
-      <OdosSwapWidget chainIds={chainIds} rpcUrlMap={rpcUrlMap} theme={exampleLightTheme} />
+      <OdosSwapWidget
+        chainIds={chainIds}
+        rpcUrlMap={rpcUrlMap}
+        theme={exampleLightTheme}
+        tokenWhitelistMap={tokenWhitelistMap}
+        defaultInputTokenMap={defaultInputTokenMap}
+        defaultOutputTokenMap={defaultOutputTokenMap}
+      />
     </div>
   );
 }
