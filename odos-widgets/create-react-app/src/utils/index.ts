@@ -1,5 +1,5 @@
 export const chainIds = [
-  1, 10, 56, 137, 250, 252, 324, 5000, 8453, 34443, 42161, 43114, 59144, 534352,
+  1, 10, 56, 137, 146, 250, 252, 324, 5000, 8453, 34443, 42161, 43114, 59144, 534352,
 ];
 
 // Returns an rpcUrlMap with custom RPC URLs from environment variables, or undefined if none are found.
@@ -9,6 +9,7 @@ export const getRpcUrlMap = (): Record<number, string> | undefined => {
     10: process.env.REACT_APP_OPTIMISM_RPC,
     56: process.env.REACT_APP_BSC_RPC,
     137: process.env.REACT_APP_POLYGON_RPC,
+    146: process.env.REACT_APP_SONIC_RPC,
     250: process.env.REACT_APP_FANTOM_RPC,
     252: process.env.REACT_APP_FRAXTAL_RPC,
     324: process.env.REACT_APP_ZKSYNC_ERA_RPC,
