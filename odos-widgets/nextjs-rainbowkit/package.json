@@ -1,5 +1,5 @@
 {
-  "name": "nextjs-page-router",
+  "name": "nextjs-rainbowkit",
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev",
@@ -9,15 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "next": "14.2.8",
+    "@rainbow-me/rainbowkit": "^2.1.2",
+    "@tanstack/react-query": "^5.28.4",
+    "next": "^14.2.3",
     "odos-widgets": "^1.4.0-beta.1",
-    "react": "^18",
-    "react-dom": "^18"
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "viem": "2.9.31",
+    "wagmi": "^2.9.2"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.20",
     "eslint": "^8",
     "eslint-config-next": "14.2.8",
     "postcss": "^8",

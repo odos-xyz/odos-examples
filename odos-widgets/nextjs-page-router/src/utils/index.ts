@@ -128,3 +128,21 @@ export const exampleDarkTheme = {
   backgroundColor400: "#21252B",
   wcThemeMode: "dark",
 };
+
+export const exampleRetroTheme = {
+  maxWidth: 430,
+  fontFamily: "Courier New, monospace",
+  textColor100: "#E0E0E0",
+  textColor200: "#00C2D4",
+  textColor300: "#B0B0B0",
+  accentTextColor: "#FFFFFF",
+  accentColor: "#07737D",
+  successColor: "#24B47E",
+  errorColor: "#FF4D4F",
+  warningColor: "#FFA500",
+  backgroundColor100: "#1A0033",
+  backgroundColor200: "#240046",
+  backgroundColor300: "#370059",
+  backgroundColor400: "linear-gradient(to right, #10002B, #4f0e80, #6d0e80)",
+  wcThemeMode: "dark",
+};

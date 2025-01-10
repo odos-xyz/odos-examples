@@ -1,7 +1,3 @@
-export const chainIds = [
-  1, 10, 56, 137, 146, 250, 252, 324, 5000, 8453, 34443, 42161, 43114, 59144, 534352,
-];
-
 // Returns an rpcUrlMap with custom RPC URLs from environment variables, or undefined if none are found.
 export const getRpcUrlMap = (): Record<number, string> | undefined => {
   const envVars = {

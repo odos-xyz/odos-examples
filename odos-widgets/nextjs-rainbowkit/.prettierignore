@@ -1,0 +1,10 @@
+/out/
+/build
+/.next/
+/.swc/
+/node_modules
+.DS_Store
+.contentlayer
+.vercel
+.env.local
+.env.example
