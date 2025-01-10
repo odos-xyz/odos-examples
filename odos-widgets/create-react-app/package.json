@@ -11,7 +11,7 @@
   "dependencies": {
     "@wagmi/connectors": "^5.7.3",
     "@wagmi/core": "^2.16.3",
-    "odos-widgets": "^1.4.0-beta.2",
+    "odos-widgets": "^1.4.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "viem": "^2.22.6"

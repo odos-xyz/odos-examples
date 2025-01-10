@@ -12,7 +12,7 @@
     "@rainbow-me/rainbowkit": "^2.2.1",
     "@tanstack/react-query": "^5.63.0",
     "next": "^14.2.8",
-    "odos-widgets": "^1.4.0-beta.2",
+    "odos-widgets": "^1.4.0",
     "react": "^18",
     "react-dom": "^18",
     "viem": "^2.22.6",
