@@ -9,9 +9,12 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "odos-widgets": "^1.4.0-beta.1",
+    "@wagmi/connectors": "^5.7.3",
+    "@wagmi/core": "^2.16.3",
+    "odos-widgets": "^1.4.0-beta.2",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "viem": "^2.22.6"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
@@ -31,7 +34,7 @@
     "prettier": "^3.3.3",
     "react-app-rewired": "^2.2.1",
     "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
+    "typescript": "^5.7.3",
     "web-vitals": "^2.1.4"
   },
   "eslintConfig": {
