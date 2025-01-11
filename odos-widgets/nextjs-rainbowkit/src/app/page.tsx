@@ -1,9 +1,8 @@
 "use client";
 import { OdosSwapWidget } from "odos-widgets";
+import { config } from "@/context/WalletProvider";
 import {
-  getRpcUrlMap,
-  exampleLightTheme,
-  chainIds,
+  exampleRetroTheme,
   tokenWhitelistMap,
   defaultInputTokenMap,
   defaultOutputTokenMap,
@@ -13,15 +12,12 @@ import {
 // All OdosSwapWidget props are optional.
 // More details can be found here: https://www.npmjs.com/package/odos-widgets
 export default function Home() {
-  const rpcUrlMap = getRpcUrlMap();
-
   return (
     <div className="flex w-full flex-1 flex-col items-center justify-center space-y-6 p-2">
-      <h1 className="text-2xl">Next.js Example</h1>
+      <h1 className="text-2xl">Next.js RainbowKit Example 🌈</h1>
       <OdosSwapWidget
-        chainIds={chainIds}
-        rpcUrlMap={rpcUrlMap}
-        theme={exampleLightTheme}
+        theme={exampleRetroTheme}
+        wagmiConfig={config}
         tokenWhitelistMap={tokenWhitelistMap}
         defaultInputTokenMap={defaultInputTokenMap}
         defaultOutputTokenMap={defaultOutputTokenMap}
